@@ -3,20 +3,38 @@
 <head>
 	<meta charset="UTF-8">
 	<title>99 verhalen</title>
+	<link rel="stylesheet" href="../styles/style-inlog.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 	<nav>
 		<section>
 			<a href="/Index.html" title="NS">
 				<img src="" alt="NS logo">
-				<h2> Verhalen </h2>
+				<h1> Verhalen </h1>
 			</a>
+			<ul>
+				<li>
+		           	<form>
+		           		<label for="search">Zoeken</label>
+						<input type="search" name="zoeken" placeholder="Typ uw zoekwoord...">
+          				</label>
+        			</form>
+		        </li>
+		        <li>
+		           <a href="pages/leeslijst.html" title="Leeslijst">Leeslijst</a>
+		        </li>
+		        <li>
+		           <a href="pages/inlog.html" title="Inloggen">Inloggen</a>
+		        </li>
+		       
+		    </ul>
 		</section>
 	</nav>	
 
 	<main>
 		<article>
-			<h1> Welkom bij uw NS 99 verhalen account. </h1>
+			<h2> Welkom bij uw NS 99 verhalen account. </h2>
 			<form>
 	        	<fieldset>
 	          		<legend>Inloggen</legend>
@@ -24,9 +42,7 @@
 		           	<input type="text" id="email" name="email" required="">
 	            	<label for="password">Wachtwoord</label>
 	            	<input type="password" id="password" name="password" required="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}">
-	          		<label>
-	            		<input type="submit" value="Inloggen">
-	          		</label>
+	            	<button>Inloggen</button>
 	          		<button>Wachtwoord vergeten?</button>
 	        	</fieldset>
 	      	</form>
@@ -44,7 +60,7 @@
 		           <p>Verhalen geschikt voor elk device</p>
 		        </li>
 		        <li>
-		           <p>Overal en elk moment</p>
+		           <p>Deel verhalen met uw vrienden</p>
 		        </li>
 		    </ul>
 	        <button>Account aanmaken</button>
