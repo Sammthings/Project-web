@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>heart</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M33.5480769,9.30769231 C35.1827005,10.990393 36,13.0456609 36,15.4735577 C36,17.9014544 35.1827005,19.9567224 33.5480769,21.6394231 L21,34.6923077 L8.45192308,21.6394231 C6.81729952,19.9567224 6,17.9014544 6,15.4735577 C6,13.0456609 6.81729952,10.990393 8.45192308,9.30769231 C9.89423798,7.76922308 11.6610472,7 13.7524038,7 C15.8437605,7 17.6105697,7.76922308 19.0528846,9.30769231 L21,11.3269231 L23.0192308,9.30769231 C24.4615457,7.76922308 26.2163358,7 28.2836538,7 C30.3509719,7 32.105762,7.76922308 33.5480769,9.30769231 Z" id="path-1" stroke="red" stroke-width="2"></path>
+    </defs>
+    <g id="Ontwerp-ns" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="heart">
+            <g>
+                <use fill="#233974" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
