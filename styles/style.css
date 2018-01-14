@@ -53,13 +53,30 @@ h4 {font-size: 1.25em;}
 
 .container{
 	width: 90%;
-	max-width: 30em;
 	display:flex;
 	margin:auto;
 	position: relative;
 	flex-wrap: wrap;
 }
-.container.up {position: relative;top: -5em;z-index: 5;}
+
+	@media only screen and (min-width: 48em)  {
+		.container{
+			width: 90%;
+			max-width: 50em;
+		}
+	}
+	@media only screen and (min-width: 60em)  {
+		.container{
+			width: 90%;
+			max-width: 90em;
+		}
+	}
+.container.up {
+	position: relative;
+	top: -5em;
+	z-index: 5;
+}
+
 
 
 /*===================================================
@@ -170,7 +187,21 @@ header picture img {
 	top: 50%;
 	transform: translate(-50%, -50%);/* img mask */
 }
-
+	@media only screen and (min-width: 32em){
+		header picture img{
+			width: 250%;
+		}
+	}
+	@media only screen and (min-width: 44em){
+		header picture img{
+			width: 190%;
+		}
+	}
+	@media only screen and (min-width: 60em){
+		header picture img{
+			width: 102%;
+		}
+	}
 
 header h2{
 	position: absolute;
@@ -185,7 +216,19 @@ header h2{
 	font-size: 1.25em;
 	line-height: 1.5;
 	}
+	@media only screen and (min-width: 39em){
+		header h2{
+			width: 65%;
+		}
+	} 
+	@media only screen and (min-width: 50em){
+		header h2{
+			font-size:1.5em;
+			max-width: 20em;
+		}
+	} 
 
+	
 /*===================================================
 Section (aanbevolen voor jouw)
 ===================================================*/
@@ -199,8 +242,16 @@ section.uitgelicht article{
 	background-color: #f4c015;
 	padding:0;
 	margin-bottom: 1em;
+	display: flex;
+	flex-wrap: wrap;
 	width:100%;
 }
+	@media only screen and (min-width: 34em)  {
+		section.uitgelicht article {
+		    margin:0;
+		}
+	}
+
 .uitgelicht button{
 	background-color: #f4c015;
 }
@@ -208,6 +259,11 @@ section.uitgelicht article{
 section.uitgelicht article header {
     height: 10em;
 }
+	@media only screen and (min-width: 32em)  {
+		section.uitgelicht article header {
+		    height: 16em;
+		}
+	}
 
 section.uitgelicht article header h2 {
     margin: 0;
@@ -239,6 +295,7 @@ section .uitgelicht article picture{
     position: relative;
     overflow: hidden;
 }
+
 section.uitgelicht article picture img{
 	width: 130%;
 	position: absolute; 
@@ -246,6 +303,11 @@ section.uitgelicht article picture img{
 	top: 50%;
 	transform: translate(-50%, -50%);/* img mask */
 }
+	@media only screen and (min-width: 39em)  {
+		section.uitgelicht article picture img{
+			width: 150%;
+		}
+	}
 .uitgelicht article ul{
 	list-style-type:none;
 	display: flex;
@@ -262,14 +324,38 @@ section.uitgelicht article picture img{
 	text-decoration: none;
 	border-bottom: #005ca0 solid 0.25em;
 }
+@media only screen and (min-width: 39em)  {
+		section.uitgelicht {
+			display:flex;
+			width: 100%;
+		}
+		section.uitgelicht article header{
+			width: 50%;
+		}
 
+		section.uitgelicht article .col-50{
+			width: 50%;
+		}
+
+		
+	}
+	
 
 /*===================================================
 filter + sorteren
 ===================================================*/
+
+
+
 aside{
 	width: 100%;
 }
+	@media only screen and (min-width: 50em){
+		main aside{
+			width: 30%;
+			padding: 0 1em 0 0;
+		}
+	}
 fieldset{
 	border:none;
 	padding:0;
@@ -310,10 +396,24 @@ Main
 ===================================================*/
 main{
 	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
 }
 main section{
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
+	@media only screen and (min-width: 50em){
+		main section{
+			width: 70%;
+		}
+	}
+	@media only screen and (min-width: 70em){
+		main section{
+			width: 70%;
+		}
+	}
 
 main section article{
 	background-color: white;
@@ -321,9 +421,33 @@ main section article{
 	margin-bottom: 1em;
 	width:100%;
 }
+	@media only screen and (min-width: 39em) {
+		main section article{
+			width: 48%;
+			margin:3% 1%;
+		}
+	}
+	@media only screen and (min-width: 50em){
+		main section article{
+			width: 48%;
+			margin:3% 1%;
+		}
+	}
+	@media only screen and (min-width: 70em){
+		main section article{
+			width: 30%;
+			margin:3% 1%;
+		}
+	}
+
 main section article header {
     height: auto;
 }
+	@media only screen and (min-width: 39em) {
+		main section h2{
+			width: 100%;
+		}
+	}
 
 main section article header h3 {
     margin: 0;
