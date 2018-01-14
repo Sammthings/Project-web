@@ -53,6 +53,7 @@ h4 {font-size: 1.25em;}
 
 .container{
 	width: 90%;
+	max-width: 30em;
 	display:flex;
 	margin:auto;
 	position: relative;
@@ -72,6 +73,7 @@ nav{
 nav .container section {
     width: 20%;
     padding: 1.2em 0em;
+    max-height: 3.75em;
 }
 nav .container section a h1 {
     display: none;
@@ -80,6 +82,7 @@ nav .container ul {
     margin: 0;
     padding: 0;
     width: 80%;
+    max-height: 3.75em;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -87,14 +90,56 @@ nav .container ul {
 }
 nav .container ul li{
 	padding: 0.5em;
-}
-nav .container ul li a img{
-	
+	display: flex;
 }
 nav .container ul li a span,
 nav .container ul li form {
     display: none;
+
 }
+@media only screen and (min-width: 48em)  {
+	nav .container section a h1 {
+    display: flex;
+    color:#003082;
+    margin: -0.1em 0.5em;
+ }
+	nav .container section a  {
+    text-decoration: none;
+    display: flex;
+    font-size: 0.7em;
+	}
+	nav .container section{
+		display: flex;
+	}
+
+	nav .container ul li a span,
+	nav .container ul li form {
+    	display: flex;
+	}
+	nav .container ul li:last-of-type a span {
+    position: relative;
+    top: 0.4em;
+	}	
+	nav .container ul li a {
+    	display: flex;
+    	text-decoration: none;
+    	color:#003082;
+	}
+	nav .container ul li form{
+		top:1em;
+	}
+	nav .container ul li form label {
+	    display: none;
+	}
+
+	nav .container ul li form input {
+		box-shadow: none;
+		border: none;
+		border-bottom: 1px solid #003082;
+	}
+	
+}
+
 
 
 /*===================================================

@@ -59,6 +59,7 @@ h4 {font-size: 1.25em;}
 	flex-wrap: wrap;
 }
 
+
 /*===================================================
 Nav
 ===================================================*/
@@ -70,6 +71,7 @@ nav{
 nav .container section {
     width: 20%;
     padding: 1.2em 0em;
+    max-height: 3.75em;
 }
 nav .container section a h1 {
     display: none;
@@ -78,6 +80,7 @@ nav .container ul {
     margin: 0;
     padding: 0;
     width: 80%;
+    max-height: 3.75em;
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -85,60 +88,174 @@ nav .container ul {
 }
 nav .container ul li{
 	padding: 0.5em;
-}
-nav .container ul li a img{
-	
+	display: flex;
 }
 nav .container ul li a span,
 nav .container ul li form {
     display: none;
 }
 
+@media only screen and (min-width: 48em)  {
+	nav .container section a h1 {
+    display: flex;
+    color:#003082;
+    margin: -0.1em 0.5em;
+ }
+	nav .container section a  {
+    text-decoration: none;
+    display: flex;
+    font-size: 0.7em;
+	}
+	nav .container section{
+		display: flex;
+	}
+
+	nav .container ul li a span,
+	nav .container ul li form {
+    	display: flex;
+	}
+	nav .container ul li:last-of-type a span {
+    position: relative;
+    top: 0.4em;
+	}	
+	nav .container ul li a {
+    	display: flex;
+    	text-decoration: none;
+    	color:#003082;
+	}
+	nav .container ul li form{
+		top:1em;
+	}
+	nav .container ul li form label {
+	    display: none;
+	}
+
+	nav .container ul li form input {
+		box-shadow: none;
+		border: none;
+		border-bottom: 1px solid #003082;
+	}
+	
+}
+
+
+
 /*===================================================
 Main
 ===================================================*/
 main{
-	padding-top:1em;
+	display: flex;
+	justify-content: center;
+	align-items:  center;
+	padding: 4em 0em;
 }
 
-main div.container article  {
+main div.container section  {
 	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
 	background-color: white;
 	padding: 1em;
 }
+	@media only screen and (min-width: 26.250em)  {
+		main div.container section  {
+			width: 100%;
+			max-width: 26em;
+			margin:auto;
+		}
+	}
+	@media only screen and (min-width: 54em)  {
+		main div.container section  {
+			max-width: 60em;
+			padding: 3em;
+		}
+	}
 
 main h2{
-	color:#005ca0;
+	color:#003082;
 	padding-top:1em;
 	margin: 0;
 }
 
- main div.container article ul{
+ main div.container section ul{
 	list-style: none;
-	padding:0;
-
+	padding: 0 0 1em 0;
 }
-main div.container article a{
+main div.container section a{
 	background-color:#0079d3;
 	color:white;
-	padding:0.5em;
+	padding: 0.5em 1em;
 	text-decoration: none;
-	border-bottom: #005ca0 solid 0.25em;
+	border-bottom: #003082 solid 0.25em;
+}
+main section ul li:before {
+    font-family: Ionicons;
+    content: '\f3fd';
+    padding-right: 0.5em;
+    font-size: 2em;
+    position: relative;
+    color: green;
+    top: 0.2em;
+}
+main div.container section form a {
+    display: inline-block;
+}
+main div.container section a:hover > i {
+    left: 0.2em;
+    transition: all ease-in-out .2s;
 }
 
+main div.container section a i {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    position: relative;
+    transition: all .2s ease-in-out;
+    left: 0;
+    top: 0.075em;
+}
 /*===================================================
 section met formulier
 ===================================================*/
+section.login article{
+	width:100%;
+}
+	@media only screen and (min-width: 54em)  {
+		section.login article{
+			width:50%;
+		}
+	}
 
-article form {
-	background: #f4c015;
+
+section.login h2{
+	padding-bottom: 1em;
+	padding-top:0;
+	margin:0;
+	width: 100%;
+}
+section.login article h2 {
+    padding: 0;
+}
+section.login article:first-of-type {
+    background: #f4c015;
+    padding: 2em 0em;
+}
+	@media only screen and (min-width: 54em)  {
+		section.login article:last-of-type {
+		    padding: 0em 2em;
+		}
+	}
+
+section.login article {
+	padding:0.5em;
 }
 fieldset{
 	border:none;
+	padding: 1em;
 }
 legend{
 	font-size: 1em;
-	color: #005ca0;
+	color: #003082;
+	padding-top: 1em;
 }
 input {
 	width: 100%;
@@ -159,9 +276,24 @@ input[type=text]:focus {
 input[type=password] {
     border: none;
     outline: none;
+
 }
 input[type=password]:focus {
     border: 0.1em dotted ;
+
+}
+article form fieldset a:nth-of-type(1){
+	background-color:#0079d3;
+	color:white;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	border-bottom: #003082 solid 0.25em;
+}
+article form fieldset a:nth-of-type(2){
+	background-color:transparent;
+	color:#0079d3;
+	border-bottom: 0;
+	font-size: 0.75em;
 }
 
 
