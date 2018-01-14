@@ -27,6 +27,7 @@ body {
     font-family: "Univers-Light-Normal";
     color: black;
     background-color: #e6e6e9;
+    margin: 0;
 }
 p {
     line-height: 1.5em;
@@ -49,6 +50,14 @@ h2 {font-size: 1.953em;}
 h3 {font-size: 1.563em;}
 
 h4 {font-size: 1.25em;}
+
+.container{
+	width: 90%;
+	display:flex;
+	margin:auto;
+	position: relative;
+	flex-wrap: wrap;
+}
 
 /*===================================================
 Nav
@@ -88,9 +97,33 @@ nav .container ul li form {
 /*===================================================
 Main
 ===================================================*/
-
 main{
-	background: white;
+	padding-top:1em;
+}
+
+main div.container article  {
+	width: 100%;
+	background-color: white;
+	padding: 1em;
+}
+
+main h2{
+	color:#005ca0;
+	padding-top:1em;
+	margin: 0;
+}
+
+ main div.container article ul{
+	list-style: none;
+	padding:0;
+
+}
+main div.container article a{
+	background-color:#0079d3;
+	color:white;
+	padding:0.5em;
+	text-decoration: none;
+	border-bottom: #005ca0 solid 0.25em;
 }
 
 /*===================================================
@@ -102,6 +135,10 @@ article form {
 }
 fieldset{
 	border:none;
+}
+legend{
+	font-size: 1em;
+	color: #005ca0;
 }
 input {
 	width: 100%;
@@ -127,10 +164,14 @@ input[type=password]:focus {
     border: 0.1em dotted ;
 }
 
+
 /*===================================================
 Footer
 ===================================================*/
-
 footer{
-	background: white;
+	background-color: white;
+	font-size: 1em;
+	margin-top: 1em;
+	padding: 1em 1em 1em 1em;
+
 }
