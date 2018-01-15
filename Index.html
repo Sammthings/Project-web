@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>99 verhalen</title>
 	<link rel="stylesheet" href="styles/style.css"/>
-	<link rel="stylesheet" href="../styles/ionicons.min.css"/>
+	<link rel="stylesheet" href="styles/ionicons.min.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -80,14 +80,14 @@
 		
 		<main>
 			<aside>
-				<h3>Resultaten verfijnen</h3> <i class="icon"></i>
-				<div class="hidden-content">
+				<h3 class="nav-button">Resultaten verfijnen <i class="ion-ios-arrow-down"></i></h3> 
+				<div class="drop-down">
 				<a href="#"> Alles wissen</a>
 				<hr>
 				    <form>
 				        <fieldset>
 				        	<legend>Filter op tijd</legend>
-				        	<ul>
+				        	<ul >
 						                <li>
 						                  	<input type="checkbox" id="5" name="5" value="5">
 						                  	<label for="5">5 minuten</label>
@@ -134,13 +134,13 @@
 				        </fieldset>
 				        <hr>
 				        <h4>Tags</h4>
-					        <ul class="tag">
-					          <li><a href="#" title="Sport">Liefde</a></li>
-					          <li><a href="#" title="Kinderen">Angst</a></li>
-					          <li><a href="#" title="Leuk">Vreugde</a></li>
-					          <li><a href="#" title="Spannend">Woede</a></li>
-					          <li><a href="#" title="Kinderen">Verrassing / verbazing</a></li>
-					          <li><a href="#" title="Leuk">Walging</a></li>
+					        <ul class="tag" id="tags">
+					          <li class="tag-select">Liefde</li>
+					          <li class="tag-select">Angst</li>
+					          <li class="tag-select">Vreugde</li>
+					          <li class="tag-select">Woede</li>
+					          <li class="tag-select">Verrassing / verbazing</li>
+					          <li class="tag-select">Walging</li>
 					        </ul>
 				    </form>	
 				</div>
@@ -149,7 +149,7 @@
 				<h2>(99) verhalen</h2>
 				<article>
 						<header>
-							<button>
+							<button class="heart_btn">
 			          			12
 			          		</button>
 			        		<h3>Martin Bril</h3>
@@ -167,7 +167,7 @@
 				</article>
 				<article>
 					<header>
-						<button>
+						<button class="heart_btn">
 		          			34
 		          		</button>
 		        		<h3>Paranoia</h3>
@@ -185,7 +185,7 @@
 				</article>
 				<article>
 					<header>
-						<button>
+						<button class="heart_btn">
 		          			9
 		          		</button>
 		        		<h3>Doof</h3>
@@ -203,7 +203,7 @@
 				</article>
 				<article>
 					<header>
-						<button>
+						<button class="heart_btn">
 		          			41
 		          		</button>
 		        		<h3>Hongerwinter</h3>
@@ -221,7 +221,7 @@
 				</article>
 				<article>
 					<header>
-						<button>
+						<button class="heart_btn">
 		          			23
 		          		</button>
 		        		<h3>Beroemd</h3>
@@ -239,7 +239,7 @@
 				</article>
 				<article>
 					<header>
-						<button>
+						<button class="heart_btn">
 		          			1
 		          		</button>
 		        		<h3>Bejaard</h3>
@@ -261,5 +261,7 @@
 	<footer>
 		© Nederlandse Spoorwegen 2017
 	</footer>
+
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

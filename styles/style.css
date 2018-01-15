@@ -284,7 +284,18 @@ section.uitgelicht article header button {
     top: -1em;
     padding: 1em;
 }
-
+main section article header button:before {
+    font-family: Ionicons;
+    content: '\f442';
+    display: flex;
+    font-size: 1.6em;
+    transition: all .2s ease-in-out;
+}
+main section article header button.active:before {
+    color: #ce0707;
+    content: '\f443';
+    transition: all .2s ease-in-out;
+}
 section.uitgelicht article p {
     padding: 0em 1em;
 }
@@ -364,6 +375,38 @@ legend{
 	font-size: 1em;
 	color: #005ca0;
 }
+
+aside .drop-down {
+    transition: all .5s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+	@media only screen and (min-width: 50em)  {
+		aside .drop-down {
+		    max-height: 32em;
+		}
+		aside h3.nav-button.active i {
+		    transform:none !important;
+		}
+	}
+aside h3 i {
+    position: absolute;
+    right: 1em;
+}
+aside h3.nav-button.active i {
+    transform: rotate(+180deg);
+    transition: all .3s ease-in-out;
+}
+aside h3 i {
+    transition: all .3s ease-in-out;
+}
+aside h3 {
+    position: relative;
+    cursor: pointer;
+}
+aside .drop-down.slide {
+	max-height: 32em;
+}
 aside ul{
 	list-style: none;
 }
@@ -376,19 +419,21 @@ aside ul.tag{
 	flex-wrap: wrap;
 }
 aside ul.tag li{
+	cursor: pointer;
 	list-style-type:none;
 	background-color:#0079d3;
 	padding:0.5em;
 	margin: 0.5em;
-	border-bottom: #005ca0 solid 0.25em;
-}
-aside li a{
+	transition: all .2s ease-in-out;
+	box-shadow: inset 0 -.25rem 0 #005ca0;
 	color:white;
 }
-aside a{
-	text-decoration: none;
-
+aside ul.tag li.tag-select.active {
+	
+    box-shadow: inset 0 -2.3rem 0 #005ca0;
+    
 }
+
 
 
 /*===================================================
@@ -462,12 +507,16 @@ main section article header h3 {
 main section article header button {
     position: absolute;
     z-index: 2;
+    outline: none;
     right: 1em;
+    cursor: pointer;
     top: -1em;
-    padding: 1em;
+    text-align: center;
+    padding: 0.5em 1.5em;
 }
 button{
 	background-color: #f4c015;
+	border: none;
 }
 
 main section article ul{
