@@ -1,3 +1,5 @@
+// Bron: Jesse van Thijn. Hij heeft mij geholpen met deze javascript code.
+
 var DropButton = document.querySelector('.nav-button'); // Selecteerd de button
 var DropDown = document.querySelector('.drop-down'); //Selecteerd de hidden content 
 
