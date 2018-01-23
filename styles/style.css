@@ -51,6 +51,11 @@ h3 {font-size: 1.563em;}
 
 h4 {font-size: 1.25em;}
 
+:focus{
+	border: 0.1px dotted;
+	outline: none;
+}
+
 .container{
 	width: 90%;
 	display:flex;
@@ -108,6 +113,7 @@ nav .container ul {
 nav .container ul li{
 	padding: 0.5em;
 	display: flex;
+	position: relative;
 }
 nav .container ul li a span,
 nav .container ul li form {
@@ -199,7 +205,7 @@ header picture img {
 	}
 	@media only screen and (min-width: 60em){
 		header picture img{
-			width: 102%;
+			width: 140%;
 		}
 	}
 
@@ -284,14 +290,14 @@ section.uitgelicht article header button {
     top: -1em;
     padding: 1em;
 }
-main section article header button:before {
+section.uitgelicht header button:before, main section article header button:before {
     font-family: Ionicons;
     content: '\f442';
     display: flex;
     font-size: 1.6em;
     transition: all .2s ease-in-out;
 }
-main section article header button.active:before {
+section.uitgelicht header button.active:before, main section article header button.active:before {
     color: #ce0707;
     content: '\f443';
     transition: all .2s ease-in-out;
@@ -350,7 +356,24 @@ section.uitgelicht article picture img{
 
 		
 	}
-	
+.notification {
+    background: red;
+    color: #fff;
+    border-radius: 14em;
+    height: 1.4em;
+    width: 1.4em;
+    padding: 0.1em 0em;
+    text-align: center;
+    font-size: 0.75em;
+    position: absolute;
+    top: 0px;
+    left: -5px;
+}
+.notification p{
+	margin: 0;
+	padding:0;
+	font-size: 0.75em;
+}
 
 /*===================================================
 filter + sorteren
@@ -383,12 +406,13 @@ aside .drop-down {
 }
 	@media only screen and (min-width: 50em)  {
 		aside .drop-down {
-		    max-height: 32em;
+		    max-height: 45em;
 		}
 		aside h3.nav-button.active i {
 		    transform:none !important;
 		}
 	}
+
 aside h3 i {
     position: absolute;
     right: 1em;
@@ -427,12 +451,38 @@ aside ul.tag li{
 	transition: all .2s ease-in-out;
 	box-shadow: inset 0 -.25rem 0 #005ca0;
 	color:white;
+	bottom:0;
+	position: relative;
+}
+aside ul.tag li:hover {
+    bottom: 0.2em;
 }
 aside ul.tag li.tag-select.active {
 	
     box-shadow: inset 0 -2.3rem 0 #005ca0;
     
 }
+input[type='checkbox'] {
+    -webkit-appearance:  none;
+    border: 1px solid;
+    height: 1.2em;
+    width: 1.2em;
+    position: relative;
+    top: 0.3em;
+}
+input[type='checkbox']:before {
+    content: '';
+}
+input[type='checkbox']:checked:before {
+    content: '\f3fd';
+    font-family: Ionicons;
+    font-size: 3em;
+    position: absolute;
+    top: -14px;
+    color: #319431;
+    left: 1px;
+}
+
 
 
 
@@ -537,13 +587,15 @@ main section article picture{
 
 }
 main section article picture img{
-	width: 167%;
+	width: 197%;
 	position: absolute; 
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);/* img mask */
 }
-
+main section article p{
+	height: 6em;
+}
 main section article footer a{
 	color:#0079d3;
 	text-decoration: none;
@@ -552,6 +604,20 @@ main section article footer a:hover {
 	color:#005ca0;
 	text-decoration: none;
 }
+main section article footer a:hover > i {
+    left: 0.2em;
+    transition: all ease-in-out .2s;
+}
+
+main section article footer a i {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    position: relative;
+    transition: all .2s ease-in-out;
+    left: 0;
+    top: 0.075em;
+}
+
 
 /*===================================================
 Footer

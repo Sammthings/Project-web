@@ -2,6 +2,8 @@
 
 var DropButton = document.querySelector('.nav-button'); // Selecteerd de button
 var DropDown = document.querySelector('.drop-down'); //Selecteerd de hidden content 
+var likes = document.querySelectorAll(".heart_btn")
+var notification = document.querySelectorAll(".notification")
 
 var ul = document.getElementById("tags");
 var items = ul.getElementsByTagName("li");
@@ -31,5 +33,41 @@ for (var i = 0; i < item.length; i++) {
   }
 }
 
+if (likes[0]) {
+    for (var i = 0; i < likes.length; i++) {
+    	if(!likes[i].value)
+    	{
+			likes[i].value = "false";
+    	}
+
+        likes[i].addEventListener("click", function() {
+            var that = this;
+            var span = that.querySelector("span");
+            var num = parseInt(span.innerHTML);
+    		if(that.value == "true")
+    		{
+    			num -= 1;
+    			span.innerHTML = num;
+				adjustNotification(that, -1);
+				that.value = "false";
+    		}
+    		else
+    		{
+    			num += 1;
+    			span.innerHTML = num;
+				adjustNotification(that, 1);
+				that.value = "true";
+    		}
+            
+        });
+    }
+}
+
+function adjustNotification (object, addition){
+    var div = document.querySelector(".notification p");
+    var not = parseInt(div.innerHTML);
+    not += addition;
+    div.innerHTML = not;
+}
 
 DropButton.addEventListener("click", toogleclass, false);
