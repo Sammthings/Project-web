@@ -32,7 +32,7 @@ for (var i = 0; i < item.length; i++) {
     this.classList.toggle('active');
   }
 }
-
+// Bron: Mick Tozer. Hij heeft mij geholpen met dit gedeelte van de code.\\
 if (likes[0]) {
     for (var i = 0; i < likes.length; i++) {
     	if(!likes[i].value)
